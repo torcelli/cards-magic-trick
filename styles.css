@@ -126,14 +126,13 @@ button:hover {
     font-size: 24px;
     color: #EBDA31;
 
-    z-index: 1;
 }
 
 .card-adivinated{
     margin: 0;
 
-    width: 10rem;
-    height: 20rem;
+    width: 8rem;
+    height: 15rem;
     background-color: #424779;
     cursor: pointer;
     display: flex;
