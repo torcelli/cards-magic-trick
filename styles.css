@@ -70,16 +70,20 @@ h1 {
 @media (max-width: 800px) {
     .header {
         h1 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         margin-top:20px;
-        margin-bottom: 80px;
+        margin-bottom: 90px;
         height: 2rem;
+        .footer{
+            font-size: 10px;
+        }
     }
     .container{
     gap: 1rem;
     }
 
+    
 }
 
 .card {
@@ -190,7 +194,7 @@ button:hover {
     transform: scale(1);
 }
 
-footer{
+.footer{
     width: 100%;
     text-align: end;
     margin-right: 50px;
@@ -201,12 +205,12 @@ footer{
     font-weight: 600;
 }
 
-footer>a{
+.footer>a{
     color: #0074ba;
     text-decoration: none;
 }
 
-footer>a:hover{
+.footer>a:hover{
     color: #00a4ba;
 }
 
