@@ -293,12 +293,12 @@ btnIniciar.addEventListener("click", async () => {
         divGameBoard.innerHTML = "";
         let successBoard = document.querySelector("#success-message-board");
         successBoard.display = "flex";
-        successBoard.innerHTML = `<h2>✨ Elegiste la carta ✨</h2><div class="card-adivinated">${cartaElegida.numero}</div>`;
+        successBoard.innerHTML = `<h2>✨ Tu carta es esta! ✨</h2><div class="card-adivinated">${cartaElegida.numero}</div>`;
         setTimeout(() => {
           const audio = new Audio("./magic.mp3");
           audio.play();
           audio.volume = 0.5;
-          successBoard.innerHTML = `<h2>✨ Elegiste la carta ✨</h2><div class="card-adivinated show">${cartaElegida.numero}</div>`;
+          successBoard.innerHTML = `<h2>✨ Tu carta es ¡esta! ✨</h2><div class="card-adivinated show">${cartaElegida.numero}</div>`;
         }, 100);
       }
     }

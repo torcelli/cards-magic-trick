@@ -1,3 +1,6 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #202124;
@@ -6,10 +9,16 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    flex-direction: column;
 }
 
 .container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
 }
 
 .header {
@@ -17,11 +26,11 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
-    height: 10rem;
     margin-top: 3rem;
     margin-bottom: 2rem;
-
+    height: 5rem;
 }
+
 
 .controls-header {
     display: flex;
@@ -52,12 +61,31 @@ h1 {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
+    padding: 0 1rem;
+    margin-bottom: 0;
+}
+
+/*el header cambia de altura si el ancho de pantalla es mayor a 768px*/
+
+@media (max-width: 800px) {
+    .header {
+        h1 {
+            font-size: 1.2rem;
+        }
+        margin-top:20px;
+        margin-bottom: 80px;
+        height: 2rem;
+    }
+    .container{
+    gap: 1rem;
+    }
+
 }
 
 .card {
     width: 60px;
     height: 90px;
-    background-color: #424779;
+    background-color: #0074ba;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -78,6 +106,7 @@ h1 {
 
 .controls {
     display: none;
+    
 }
 
 .grupo-btn {
@@ -88,6 +117,7 @@ h1 {
     color: #fafafa;
     cursor: pointer;
 }
+
 select {
     padding: 5px 15px;
     background-color: #EB9331;
@@ -112,6 +142,16 @@ button:hover {
     background-color: #EBC431;
 }
 
+.controls-header>button{
+    background-color: #0074ba;
+}
+
+.controls-header>button:hover{
+    background-color:#00a4ba;
+}
+
+
+
 .list1, .list2, .list3 {
     display: flex;
     flex-direction: row;
@@ -125,15 +165,12 @@ button:hover {
     margin-top: 10px;
     font-size: 24px;
     color: #EBDA31;
-
 }
 
 .card-adivinated{
-    margin: 0;
-
-    width: 8rem;
-    height: 15rem;
-    background-color: #424779;
+    width: 7rem;
+    height: 12rem;
+    background-color: #0074ba;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -143,7 +180,8 @@ button:hover {
     border: 2px solid #fafafa;
     border-radius: 10px;
     transform: scale(0.5);
-    transition: opacity 0.5s, transform 0.5s;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
     margin: 0 auto;
 }
 
@@ -153,14 +191,14 @@ button:hover {
 }
 
 footer{
-    position: fixed;
-    bottom: 12px;
-    left: 0;
-    right: 0;
-    text-align: center;
+    width: 100%;
+    text-align: end;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-left: 2rem;
     color: #EBAC31;
     font-size: 1em;
-
+    font-weight: 600;
 }
 
 footer>a{
